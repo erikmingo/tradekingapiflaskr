@@ -2,6 +2,7 @@
 
 from flask import Flask, jsonify, render_template
 import account
+from werkzeug.contrib.fixers import ProxyFix
 app = Flask(__name__)
 
 
@@ -21,6 +22,6 @@ def home():
 #    values = account.stockvalue(account.getstocksym(account.urlquery()))
 #    json = jsonify(values)
 #    return json
-
+app.wsgi_app = ProxyFix(app.wsgi_app)
 if __name__ == "__main__":
     app.run()
