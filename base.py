@@ -1,8 +1,7 @@
-#!venv/bin/env python
 
-from flask import Flask, jsonify, render_template
+#from flask import Flask, jsonify, render_template
 #import account
-import os
+from flask import Flask
 app = Flask(__name__)
 
 
