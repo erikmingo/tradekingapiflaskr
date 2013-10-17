@@ -11,7 +11,8 @@ def home():
     values = account.stockvalue(account.getstocksym(account.urlquery()))
     #json = jsonify(values)
     json = values
-    return render_template('home.html', json=json)
+    #return render_template('home.html', json=json)
+    return "hey yall!"
 
 
 
