@@ -1,7 +1,7 @@
 #!venv/bin/env python
 
 from flask import Flask, jsonify, render_template
-import account
+#import account
 import os
 app = Flask(__name__)
 
@@ -11,7 +11,8 @@ def home():
     values = account.stockvalue(account.getstocksym(account.urlquery()))
     #json = jsonify(values)
     json = values
-    return render_template('home.html', json=json)
+#    return render_template('home.html', json=json)
+    return "lol"
 
 
 #@app.route("/stocks/")
