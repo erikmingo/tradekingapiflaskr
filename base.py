@@ -13,7 +13,9 @@ def home():
     #return render_template('home.html', json=json)
     return "hey yall!"
 
-
+@app.route("/lol")
+def lol():
+    return"lol!"
 
 #@app.route("/stocks/")
 #def hello():
