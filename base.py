@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!venv/bin/env python
 
 from flask import Flask, jsonify, render_template
 import account
@@ -10,12 +10,8 @@ def home():
     values = account.stockvalue(account.getstocksym(account.urlquery()))
     #json = jsonify(values)
     json = values
-    #return render_template('home.html', json=json)
-    return "hey yall!"
+    return render_template('home.html', json=json)
 
-@app.route("/lol")
-def lol():
-    return"lol!"
 
 #@app.route("/stocks/")
 #def hello():
@@ -24,4 +20,4 @@ def lol():
 #    return json
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
