@@ -5,11 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-#    values = account.stockvalue(account.getstocksym(account.urlquery()))
-#    json = jsonify(values)
-#    json = values
-#    return render_template('home.html', json=json)
-    return render_tempalte('home.html')
+    values = account.stockvalue(account.getstocksym(account.urlquery()))
+    json = jsonify(values)
+    json = values
+    return render_template('home.html', json=json)
 
 
 #@app.route("/stocks/")
