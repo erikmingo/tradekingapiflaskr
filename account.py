@@ -1,4 +1,5 @@
 #!/bin/python
+import os
 import oauth2 as oauth
 import json
 
@@ -17,6 +18,7 @@ request_holdings_url = "%s/accounts/%s/holdings.json" % (_BASE_URL_, _ACCOUNT_NU
 request_values_url = "%s/market/ext/quotes.xml?" % _BASE_URL_
 #creating the client
 client = oauth.Client(consumer, token=token)
+client.ca_certs = os.path.join(os.path.dirname(__file__), 'cacert.pem')
 
 #making the request via the client
 
