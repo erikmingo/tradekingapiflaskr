@@ -5,14 +5,10 @@ app.config['DEBUG'] = True
 
 @app.route("/")
 def home():
-    try:
-        values = account.stockvalue(account.getstocksym(account.urlquery()))
-    except Exception as e:
-        values = {"error": e}
-    return jsonify(values)
+#    values = account.stockvalue(account.getstocksym(account.urlquery()))
 #    json = jsonify(values)
-#    json = values
 
+    return render_template('home.html')
     #return render_template('home.html', json=json)
 
 
