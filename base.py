@@ -5,8 +5,8 @@ app.config['DEBUG'] = True
 
 @app.route("/")
 def home():
-    #values = account.stockvalue(account.getstocksym(account.urlquery()))
-    values = {"foo": "bar"}
+    values = account.stockvalue(account.getstocksym(account.urlquery()))
+    #values = {"foo": "bar"}
     json = values
     return render_template("home.html", json=json)
 
@@ -17,4 +17,4 @@ def home():
 #    return json
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
