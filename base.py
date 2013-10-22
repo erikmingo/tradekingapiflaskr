@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, render_template
 import account
 app = Flask(__name__)
-app.config['DEBUG'] = True
 
 @app.route("/")
 def home():
