@@ -5,12 +5,10 @@ app.config['DEBUG'] = True
 
 @app.route("/")
 def home():
-#    values = account.stockvalue(account.getstocksym(account.urlquery()))
-#    json = jsonify(values)
-
-    return render_template('home.html')
-    #return render_template('home.html', json=json)
-
+    #values = account.stockvalue(account.getstocksym(account.urlquery()))
+    values = {"foo": "bar"}
+    json = values
+    return render_template("home.html", json=json)
 
 #@app.route("/stocks/")
 #def hello():
