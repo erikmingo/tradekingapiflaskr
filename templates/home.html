@@ -11,7 +11,7 @@
 
 
     <body>
-        <ul style="padding: 15px 0px 0px 30px">
+        <ul>
             {% for stock, attr in json.iteritems() %}
                 <li>
 
@@ -21,8 +21,13 @@
                 
             {% endfor %}
         </ul>
+<<<<<<< HEAD
         <p style="padding: 15px 15px 0px 15px">
             Hey all, this is my first website that uses dynamic data, I wrote this little web app in Python with the Flask microframe work! Meaning the data changes over time, if you refresh the page, I would expect that the stock price would change. The data is 
+=======
+        <p style="padding: 30px 15px 0px 15px">
+            Hey all, this is my first website that uses dynamic data! Meaning the data changes over time, if you refresh the page, I would expect that the stock price would change. The data is 
+>>>>>>> parent of 249438a... padding
             scraped from my TradeKing stockbroker API. The stock tags that you see are stocks in my portfolio ( I will not disclose what position [call or put] I hold on each       stock) The site, as of now, displays the name of the stock, the current price, and if it is up or down for the day.
         
         </p>
