@@ -2,6 +2,7 @@
 import os
 import oauth2 as oauth
 import json
+import pprint
 
 #Constants
 # key/secrets for authentication
@@ -35,9 +36,11 @@ def urlquery():
 def getstocksym(json):
     # returns the holdings under my TK acct
     allholdings = json[u"response"][u"accountholdings"][u"holding"]
+#    print(allholdings)
+    pprint.pprint(allholdings)
     for stock in allholdings:
-        sym = stock[u"instrument"][u"sym"]
-        stocksym.update({sym: 0})
+        symbol = stock[u"instrument"][u"sym"]
+        stocksym.update({symbol: 0})
     return stocksym
 
 
