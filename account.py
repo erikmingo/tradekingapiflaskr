@@ -5,13 +5,6 @@ import json
 import pprint
 
 #Constants
-# key/secrets for authentication
-_CONSUMER_KEY_          = 'm1sIVuD5kiOj9ZHXe7K2VlZjBDham6dS2yBqVNBs'
-_CONSUMER_SECRET_       = 'kE9exMYtPJVCpZYSCeyKJq4gDEJc8eN5tf0WXbEQ'
-_ACCESS_TOKEN_          = 'Wvnx3G9idazJvk2sADJcZDOKs3YRrIHNQV1sAIiW'
-_ACCESS_TOKEN_SECRET_   = 'je9oTDZXGG07geEBfIe6zS58iJ9PiLMGhLzAahRZ'
-_BASE_URL_              = "https://api.tradeking.com/v1"
-_ACCOUNT_NUMBER_        = 60532703
 
 token    = oauth.Token(key=_ACCESS_TOKEN_, secret=_ACCESS_TOKEN_SECRET_)
 consumer = oauth.Consumer(key=_CONSUMER_KEY_, secret=_CONSUMER_SECRET_)
